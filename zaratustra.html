@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Así Habló Zaratustra — Friedrich Nietzsche</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<nav id="nav">
+  <a href="#" class="nav-logo">☀ ZARATUSTRA</a>
+  <ul class="nav-links">
+    <li><a href="#colores">Los Colores</a></li>
+    <li><a href="#personajes">Personajes</a></li>
+    <li><a href="#conceptos">Conceptos</a></li>
+    <li><a href="#citas">Citas</a></li>
+    <li><a href="#estructura">Estructura</a></li>
+    <li><a href="#aplicacion">Aplicación</a></li>
+  </ul>
+  <button class="burger" onclick="abrirMenu()" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="cerrarMenu()">✕</button>
+  <a href="#colores" onclick="cerrarMenu()">Los Colores</a>
+  <a href="#personajes" onclick="cerrarMenu()">Personajes</a>
+  <a href="#conceptos" onclick="cerrarMenu()">Conceptos</a>
+  <a href="#citas" onclick="cerrarMenu()">Citas</a>
+  <a href="#estructura" onclick="cerrarMenu()">Estructura</a>
+  <a href="#aplicacion" onclick="cerrarMenu()">Aplicación</a>
+</div>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-sol"></div>
+  <div class="hero-rayos"></div>
+
+  <!-- Decoración Faravahar SVG -->
+  <svg class="faravahar-deco" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 80 C130 70 170 60 190 80 C175 85 155 88 140 95 L190 100 C165 105 140 108 120 120" stroke="#E8B400" stroke-width="1.2" fill="none"/>
+    <path d="M100 80 C90 65 95 45 100 30 C105 45 110 65 100 80Z" fill="#E8B400" opacity="0.5"/>
+    <circle cx="100" cy="110" r="18" stroke="#E8B400" stroke-width="1" fill="none"/>
+    <line x1="100" y1="128" x2="100" y2="155" stroke="#E8B400" stroke-width="0.8"/>
+    <path d="M85 155 L100 155 L115 155" stroke="#E8B400" stroke-width="0.8"/>
+  </svg>
+  <svg class="faravahar-deco-left" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100 80 C130 70 170 60 190 80 C175 85 155 88 140 95 L190 100 C165 105 140 108 120 120" stroke="#E8B400" stroke-width="1.2" fill="none"/>
+    <path d="M100 80 C90 65 95 45 100 30 C105 45 110 65 100 80Z" fill="#E8B400" opacity="0.5"/>
+    <circle cx="100" cy="110" r="18" stroke="#E8B400" stroke-width="1" fill="none"/>
+    <line x1="100" y1="128" x2="100" y2="155" stroke="#E8B400" stroke-width="0.8"/>
+    <path d="M85 155 L100 155 L115 155" stroke="#E8B400" stroke-width="0.8"/>
+  </svg>
+
+  <!-- Montaña -->
+  <svg class="hero-mountain" viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="mtnGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#111822" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#0A0F14" stop-opacity="1"/>
+      </linearGradient>
+    </defs>
+    <path d="M0 300 L360 300 L560 80 L720 20 L880 80 L1080 300 L1440 300 Z" fill="url(#mtnGrad)"/>
+    <path d="M560 80 L720 20 L880 80" stroke="#E8B400" stroke-width="1" fill="none" opacity="0.35"/>
+    <path d="M0 300 L200 300 L340 130 L460 240 L560 80" fill="rgba(10,15,20,0.8)"/>
+    <path d="M880 80 L980 240 L1100 130 L1240 300 L1440 300" fill="rgba(10,15,20,0.8)"/>
+    <circle cx="720" cy="30" r="8" fill="#E8B400" opacity="0.6"/>
+    <line x1="720" y1="14" x2="720" y2="4" stroke="#E8B400" stroke-width="1" opacity="0.4"/>
+    <line x1="733" y1="17" x2="740" y2="10" stroke="#E8B400" stroke-width="1" opacity="0.4"/>
+    <line x1="707" y1="17" x2="700" y2="10" stroke="#E8B400" stroke-width="1" opacity="0.4"/>
+  </svg>
+
+  <span class="hero-eyebrow rv">Friedrich Nietzsche · 1883–1885 · Ein Buch für Alle und Keinen</span>
+
+  <h1 class="hero-title rv d1">
+    Así Habló<br>
+    <span class="zaratustra">Zaratustra</span>
+  </h1>
+
+  <div class="hero-divider rv d2"></div>
+
+  <p class="hero-sub rv d3">
+    No es filosofía convencional. Es <em>fuego</em>.<br>
+    Un profeta que desciende de la montaña para enseñar lo que nadie está dispuesto a escuchar.
+  </p>
+
+  <div class="hero-scroll rv d4" onclick="document.getElementById('contexto').scrollIntoView()">Descender</div>
+</section>
+
+<div class="llama-divider"></div>
+
+<!-- ─── CONTEXTO ─── -->
+<section id="contexto" class="sec">
+  <span class="eyebrow rv">I — Punto de partida</span>
+  <h2 class="sec-titulo rv">Por qué <em>este libro</em><br>trasciende la literatura</h2>
+  <p class="sec-lead rv">Nietzsche lo concibió en arrebatos de fiebre creativa. No buscaba convencer: buscaba transformar. Su estructura —un poema en prosa con cadencia bíblica— constituye el núcleo del mensaje.</p>
+
+  <div class="ctx-grid">
+    <div class="ctx-card rv">
+      <span class="ctx-num">01</span>
+      <h3>El autor en su aislamiento</h3>
+      <p>A los 39 años, enfermo y en profunda soledad en Génova, la crisis existencial de Nietzsche —marcada por sus rupturas con Wagner, Lou Salomé y la academia— se convierte en filosofía pura. Zaratustra es la transmutación del sufrimiento personal en genialidad.</p>
+    </div>
+    <div class="ctx-card rv d1">
+      <span class="ctx-num">02</span>
+      <h3>La parodia de los Evangelios</h3>
+      <p>Adopta deliberadamente el tono profético del Nuevo Testamento mediante parábolas, sermones y discípulos. Sin embargo, subvierte el dogma cristiano: no renuncia al cuerpo, rechaza la culpa y anula la promesa de ultratumba. Reivindica el aquí y el ahora.</p>
+    </div>
+    <div class="ctx-card rv d2">
+      <span class="ctx-num">03</span>
+      <h3>El Zaratustra histórico</h3>
+      <p>Zoroastro (siglo VI a.C.) introdujo el dualismo moral del bien y el mal en Occidente. Nietzsche lo elige estratégicamente para que sea el propio profeta quien supere su doctrina. Una paradoja perfecta: el creador del error original es quien lo enmienda.</p>
+    </div>
+    <div class="ctx-card rv d3">
+      <span class="ctx-num">04</span>
+      <h3>Del fracaso a la inmortalidad</h3>
+      <p>Inicialmente se vendieron apenas cuarenta copias y la obra fue incomprendida. Décadas más tarde, transformaría el pensamiento de Hesse, Mann, Camus y Sartre. El libro que "no era para nadie" terminó perteneciendo a toda la humanidad posterior.</p>
+    </div>
+  </div>
+</section>
+
+<div class="llama-divider"></div>
+
+<!-- ─── LOS COLORES ─── -->
+<section id="colores" class="sec-full">
+  <div class="sec-full-inner">
+    <span class="eyebrow rv">II — La paleta filosófica</span>
+    <h2 class="sec-titulo rv">Los colores como <em>argumentos</em></h2>
+    <p class="sec-lead rv">En Zaratustra, la estética posee una carga conceptual. Nietzsche emplea los colores como símbolos filosóficos de precisión quirúrgica. Comprender su cromatismo es desentrañar la obra.</p>
+
+    <div class="colores-grid">
+      <div class="color-bloque amarillo rv">
+        <div class="color-swatch"></div>
+        <h3>Amarillo &amp; Rojo</h3>
+        <p class="cita-color">"Mi gusto —que es también mi fuego— ama el amarillo intenso y el rojo ardiente; mezcla sangre con todos los colores."</p>
+        <p>El amarillo encarna el sol, el amanecer y la voluntad creadora. El rojo evoca la sangre, el conflicto y la pasión terrenal que los ascetas desprecian. Juntos representan la afirmación de la existencia y la fuerza vital indómita.</p>
+      </div>
+      <div class="color-bloque rojo rv d1">
+        <div class="color-swatch"></div>
+        <h3>El Blanco: la trampa</h3>
+        <p class="cita-color">"El que blanquea su casa me traiciona un alma blanqueada."</p>
+        <p>Nietzsche utiliza el blanco como elemento de crítica. Simboliza la pureza artificial de la moral represiva, el ascetismo que niega las pulsiones corporales y la pulcritud de quien teme a sus propios instintos. Blanquear equivale a ocultar.</p>
+      </div>
+      <div class="color-bloque multicolor rv d2">
+        <div class="color-swatch"></div>
+        <h3>La Vaca Multicolor</h3>
+        <p class="cita-color">"Así llegó Zaratustra a la ciudad más cercana, que se llamaba La Vaca Multicolor."</p>
+        <p>Representa la urbe donde habita la masa. La condición multicolor no es una virtud, sino sinónimo de dispersión, pluralidad sin jerarquía y un mercado de ideas donde todo vale lo mismo y, por consiguiente, nada tiene valor real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="llama-divider"></div>
+
+<!-- ─── PERSONAJES ─── -->
+<section id="personajes" class="sec">
+  <span class="eyebrow rv">III — El elenco</span>
+  <h2 class="sec-titulo rv">Arquetipos e <em>ideas vivas</em></h2>
+  <p class="sec-lead rv">Ninguna figura en el texto es puramente literaria. Cada personaje encarna una postura ante la vida, el conocimiento y el poder. Aprender a reconocerlos es aprender a identificar las fuerzas que operan en el mundo real.</p>
+
+  <div class="chars rv">
+    <div class="char">
+      <span class="char-idx">01</span>
+      <div>
+        <div class="char-nombre">Zaratustra</div>
+        <p>Abandona su reclusión tras diez años de soledad. No es una deidad: duda, experimenta el fracaso y retorna a su origen. Su grandeza radica en su evolución constante. Es el maestro cuya máxima enseñanza consiste en prescindir de los maestros.</p>
+      </div>
+      <span class="char-rol">Protagonista</span>
+    </div>
+    <div class="char">
+      <span class="char-idx">02</span>
+      <div>
+        <div class="char-nombre">El Águila &amp; la Serpiente</div>
+        <p>Sus aliados animales. El águila representa el orgullo, el desapego y la perspectiva desde las alturas. La serpiente simboliza la sabiduría terrenal, astuta y exenta de ilusiones. La síntesis de ambos define el carácter de Zaratustra: altitud con arraigo.</p>
+      </div>
+      <span class="char-rol">Símbolo</span>
+    </div>
+    <div class="char">
+      <span class="char-idx">03</span>
+      <div>
+        <div class="char-nombre">El Volatinero</div>
+        <p>Avanza sobre una cuerda suspendida entre dos torres hasta que un bufón lo adelanta, provocando su caída mortal. Una escena crucial: aquel que busca superarse para obtener el aplauso y el reconocimiento de la multitud está condenado al fracaso.</p>
+      </div>
+      <span class="char-rol">Metáfora</span>
+    </div>
+    <div class="char">
+      <span class="char-idx">04</span>
+      <div>
+        <div class="char-nombre">El Anciano del Bosque</div>
+        <p>El primer encuentro del protagonista al descender. Un ermitaño piadoso y ajeno a la realidad histórica para quien Dios aún vive. Su ignorancia es retratada como inocente, anticipando el eje conceptual de la obra: <em>Dios ha muerto</em>.</p>
+      </div>
+      <span class="char-rol">Contrapunto</span>
+    </div>
+    <div class="char">
+      <span class="char-idx">05</span>
+      <div>
+        <div class="char-nombre">Los Hombres Superiores</div>
+        <p>Figuras que encarnan al rey, el científico, el mago y el papa jubilado, entre otros. En la cuarta parte se congregan en la cueva. Representan tipos humanos que han alcanzado la cúspide cultural, pero que siguen siendo incapaces de manifestar al Übermensch.</p>
+      </div>
+      <span class="char-rol">Conjunto</span>
+    </div>
+    <div class="char">
+      <span class="char-idx">06</span>
+      <div>
+        <div class="char-nombre">La Multitud</div>
+        <p>Los ciudadanos de La Vaca Multicolor. Se burlan de la profecía del Übermensch y muestran indiferencia ante la tragedia del volatinero. Encarnan al <em>último hombre</em>: aquel que trueca la grandeza y el peligro por la comodidad absoluta.</p>
+      </div>
+      <span class="char-rol">Antagonista</span>
+    </div>
+  </div>
+</section>
+
+<div class="llama-divider"></div>
+
+<!-- ─── CONCEPTOS ─── -->
+<section id="conceptos" class="sec-full">
+  <div class="sec-full-inner">
+    <span class="eyebrow rv">IV — La filosofía</span>
+    <h2 class="sec-titulo rv">Seis pilares para <em>derribar</em><br>el viejo mundo</h2>
+    <p class="sec-lead rv">No constituyen teorías académicas abstractas, sino herramientas existenciales. Zaratustra las experimenta y las sufre en primera persona con el fin de convertirlas en praxis.</p>
+
+    <div class="concepts">
+      <div class="concept rv" data-num="I">
+        <span class="concept-sym">Ü</span>
+        <h3>El Übermensch</h3>
+        <p>No posee connotaciones biológicas ni raciales. Es el <strong>ideal de autosuperación y soberanía</strong>: el individuo que engendra sus propios valores morales en lugar de heredarlos de la tradición. Es una dirección infinita, no un destino estático.</p>
+      </div>
+      <div class="concept rv d1" data-num="II">
+        <span class="concept-sym">†</span>
+        <h3>La Muerte de Dios</h3>
+        <p>Más allá del ateísmo, es el diagnóstico de un colapso cultural. Occidente ha despojado de validez a sus dogmas metafísicos fundamentales, pero ignora las consecuencias. El vacío resultante exige un acto de <strong>creación humana radical</strong>.</p>
+      </div>
+      <div class="concept rv d2" data-num="III">
+        <span class="concept-sym">∞</span>
+        <h3>El Eterno Retorno</h3>
+        <p>La propuesta existencial definitiva: <em>¿Desearías vivir esta misma vida, con cada detalle, infinitas veces?</em> No funciona como doctrina cosmológica, sino como el tamiz definitivo para evaluar el valor real de tus elecciones.</p>
+      </div>
+      <div class="concept rv" data-num="IV">
+        <span class="concept-sym">⚡</span>
+        <h3>La Voluntad de Poder</h3>
+        <p>Lejos del dominio político o la tiranía, es la fuerza motriz del <strong>crecimiento, la asimilación y la autoafirmación</strong>. Todo organismo vivo aspira a expandir su potencial; su represión por miedo o resentimiento corrompe el espíritu.</p>
+      </div>
+      <div class="concept rv d1" data-num="V">
+        <span class="concept-sym">🐪→🦁→🧒</span>
+        <h3>Las Tres Metamorfosis</h3>
+        <p>El trayecto del espíritu: el <strong>camello</strong> tolera sumisamente los imperativos morales implícitos ("tú debes"); el <strong>león</strong> los destruye mediante la rebelión ("yo quiero"); y el <strong>niño</strong> genera nuevos comienzos desde la inocencia y el juego creador.</p>
+      </div>
+      <div class="concept rv d2" data-num="VI">
+        <span class="concept-sym">⚖</span>
+        <h3>Transmutación de Valores</h3>
+        <p>Denuncia que la moral imperante premia la sumisión y penaliza la excelencia. La transmutación no implica un nihilismo destructivo absoluto, sino el alumbramiento de una <strong>nueva escala axiológica</strong> basada en la vitalidad y la honestidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="llama-divider"></div>
+
+<!-- ─── CITAS ─── -->
+<section id="citas" class="sec">
+  <span class="eyebrow rv">V — La voz del fuego</span>
+  <h2 class="sec-titulo rv">Aforismos que <em>rompen</em> conciencias</h2>
+  <p class="sec-lead rv">Zaratustra se expresa con la elocuencia de un místico y el rigor de un analista. Cada sentencia opera como un quiebre moral. Selecciona "Abrir" para desvelar la exégesis de cada pasaje.</p>
+
+  <div class="rv">
+    <div class="cita-item">
+      <div class="cita-linea"></div>
+      <div>
+        <p class="cita-texto">"El hombre es una cuerda tendida entre el animal y el Übermensch —una cuerda sobre el abismo."</p>
+        <span class="cita-origen">Preludio · Discurso en la plaza pública</span>
+        <button class="cita-btn" onclick="abrirCita(this)">Abrir →</button>
+        <div class="cita-explicacion">No representamos un fin en nosotros mismos, sino un tránsito. La metáfora de la cuerda suspendida denota que la existencia exige una tensión constante: la parálisis conduce inevitablemente a la caída. La evolución demanda el esfuerzo de no claudicar ante la inercia animal ni detenerse por temor. El abismo constituye la condición indispensable del puente.</div>
+      </div>
+    </div>
+
+    <div class="cita-item">
+      <div class="cita-linea"></div>
+      <div>
+        <p class="cita-texto">"Mi gusto —que es también mi fuego— ama el amarillo intenso y el rojo ardiente; mezcla sangre con todos los colores."</p>
+        <span class="cita-origen">De la guerra y de los guerreros</span>
+        <button class="cita-btn" onclick="abrirCita(this)">Abrir →</button>
+        <div class="cita-explicacion">Aquí se manifiesta la clave estética del pensamiento nietzscheano. El amarillo evoca la iluminación y la soberanía conceptual, mientras que el rojo alude al compromiso vital y al riesgo inherente a la acción. Fusionar sangre con el espectro cromático implica que toda verdad genuina exige un costo personal. Aquel que pretende la belleza sin asumir el conflicto, renuncia a la vida.</div>
+      </div>
+    </div>
+
+    <div class="cita-item">
+      <div class="cita-linea"></div>
+      <div>
+        <p class="cita-texto">"El que blanquea su casa me traiciona un alma blanqueada."</p>
+        <span class="cita-origen">De la virtud que hace pequeño</span>
+        <button class="cita-btn" onclick="abrirCita(this)">Abrir →</button>
+        <div class="cita-explicacion">El blanco empleado como máscara de respetabilidad. Nietzsche critica la moral burguesa e higienizada que sepulta los instintos bajo un barniz de aparente rectitud. No constituye una muestra de inocencia, sino de cobardía existencial. La obsesión por la uniformidad moral denota pánico frente a la complejidad de las propias pasiones.</div>
+      </div>
+    </div>
+
+    <div class="cita-item">
+      <div class="cita-linea"></div>
+      <div>
+        <p class="cita-texto">"Este es mi camino. ¿Cuál es el vuestro? Así respondo a quienes me preguntan por 'el' camino. El camino, en efecto —no existe."</p>
+        <span class="cita-origen">Del espíritu de la pesadez</span>
+        <button class="cita-btn" onclick="abrirCita(this)">Abrir →</button>
+        <div class="cita-explicacion">Representa el pasaje más adogmático de la obra. Zaratustra rechaza la veneración ciega de sus partidarios. El mayor fracaso de su doctrina sería dar origen a una estirpe de imitadores que adopten su senda en lugar de trazar la propia. El propósito último de la pedagogía emancipadora es disolver la necesidad del maestro.</div>
+      </div>
+    </div>
+
+    <div class="cita-item">
+      <div class="cita-linea"></div>
+      <div>
+        <p class="cita-texto">"¿Era esto la vida? ¡Siga! ¡Que se repita!"</p>
+        <span class="cita-origen">El Eterno Retorno · Parte III</span>
+        <button class="cita-btn" onclick="abrirCita(this)">Abrir →</button>
+        <div class="cita-explicacion">La máxima síntesis del pensamiento de Nietzsche. Condensa las nociones de Eterno Retorno y Amor Fati en una sola exclamación. No denota resignación pasiva ante el destino, sino una aceptación entusiasta y soberana. Reclamar la repetición de la existencia, incluyendo sus tramos más dolorosos, constituye el acto supremo de liberación espiritual.</div>
+      </div>
+    </div>
+
+    <div class="cita-item">
+      <div class="cita-linea"></div>
+      <div>
+        <p class="cita-texto">"Debéis llegar a ser los que sois."</p>
+        <span class="cita-origen">De las viejas y nuevas tablas</span>
+        <button class="cita-btn" onclick="abrirCita(this)">Abrir →</button>
+        <div class="cita-explicacion">Lejos de ser una obviedad, plantea el desafío ontológico definitivo. El ser humano suele habitar identidades ajenas moldeadas por mandatos familiares, expectativas sociales o el miedo a la libertad. Devenir lo que se es exige despojarse de los estratos morales impuestos para descubrir la singularidad que subyace en el origen.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="llama-divider"></div>
+
+<!-- ─── ESTRUCTURA ─── -->
+<section id="estructura" class="sec-full">
+  <div class="sec-full-inner">
+    <span class="eyebrow rv">VI — El mapa</span>
+    <h2 class="sec-titulo rv">La arquitectura del <em>descenso</em></h2>
+    <p class="sec-lead rv">La obra describe un arco dramático marcado por la oscilación: el repliegue en la cumbre, el fracaso en el llano y el retorno a la altura. Un ciclo que mimetiza la propia doctrina del Eterno Retorno.</p>
+
+    <div class="timeline">
+      <div class="tl-entry rv">
+        <span class="tl-label">Parte I · 1883</span>
+        <h3>El primer descenso</h3>
+        <p>Zaratustra abandona su aislamiento de diez años. Expone la doctrina del Übermensch ante la multitud, pero provoca risas; la masa prefiere escuchar acerca del "último hombre". Tras la muerte trágica del volatinero, asume una realidad incómoda: su misión no consiste en pastorear rebaños, sino en hallar creadores capaces de romper amarras.</p>
+        <div class="tl-tags">
+          <span class="tl-tag">Übermensch</span>
+          <span class="tl-tag">Último Hombre</span>
+          <span class="tl-tag">Las Tres Metamorfosis</span>
+          <span class="tl-tag">Muerte de Dios</span>
+        </div>
+      </div>
+      <div class="tl-entry rv">
+        <span class="tl-label">Parte II · 1883</span>
+        <h3>La enseñanza madura</h3>
+        <p>Retorna a la montaña y, tras un periodo de meditación, desciende nuevamente. Sus alocuciones adquieren mayor complejidad: define la compasión auténtica (distinta de la piedad debilitante), fundamenta la voluntad de poder y reivindica la corporalidad como la inteligencia primordial. Le inquieta comprobar que sus discípulos comienzan a dogmatizar su figura.</p>
+        <div class="tl-tags">
+          <span class="tl-tag">Voluntad de Poder</span>
+          <span class="tl-tag">El Gran Mediodía</span>
+          <span class="tl-tag">Islas Afortunadas</span>
+        </div>
+      </div>
+      <div class="tl-entry rv">
+        <span class="tl-label">Parte III · 1884</span>
+        <h3>El pensamiento abismal</h3>
+        <p>Constituye el tramo más lírico y hermético del libro. Se introduce formalmente la doctrina del Eterno Retorno a través de visiones alegóricas como la disputa con el enano y la serpiente. Asimismo, el discurso sobre el "espíritu de la pesadez" articula una dura crítica contra el pensamiento dogmático, contraponiéndole una filosofía de la ligereza y la danza.</p>
+        <div class="tl-tags">
+          <span class="tl-tag">Eterno Retorno</span>
+          <span class="tl-tag">Amor Fati</span>
+          <span class="tl-tag">Las Siete Janas</span>
+        </div>
+      </div>
+      <div class="tl-entry rv">
+        <span class="tl-label">Parte IV · 1885</span>
+        <h3>El festín y la señal</h3>
+        <p>El segmento final adquiere un tono marcadamente satírico. Zaratustra asila en su cueva a los "hombres superiores" (eruditos, reyes y falsos profetas), quienes terminan parodiando la liturgia sagrada mediante la adoración de un asno. Al comprender que no encarnan su auténtica descendencia espiritual, Zaratustra saluda al nuevo alba y parte en solitario al encuentro de su destino.</p>
+        <div class="tl-tags">
+          <span class="tl-tag">Hombres Superiores</span>
+          <span class="tl-tag">La Señal</span>
+          <span class="tl-tag">La Fiesta del Asno</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="llama-divider"></div>
+
+<!-- ─── APLICACIÓN ─── -->
+<section id="aplicacion" class="sec">
+  <span class="eyebrow rv">VII — Filosofía de la acción</span>
+  <h2 class="sec-titulo rv">De la página a la <em>existencia</em></h2>
+  <p class="sec-lead rv">Nietzsche no aspiraba a fundar una escuela académica, sino a propiciar un despertar vital. El texto solo adquiere sentido cuando opera sobre la realidad cotidiana a través de directrices prácticas.</p>
+
+  <div class="apply-grid">
+    <div class="apply-card rv">
+      <div class="apply-n">I</div>
+      <h3>El imperativo del Eterno Retorno</h3>
+      <p>Frente a cada encrucijada existencial decisiva, plantéate el siguiente interrogante: <em>¿Optaría por esta alternativa sabiendo que estaré determinado a repetirla infinitas veces?</em> No funciona como freno, sino como catalizador para extirpar elecciones basadas en la inercia o el temor.</p>
+      <span class="apply-tag">Praxis existencial</span>
+    </div>
+    <div class="apply-card rv d1">
+      <div class="apply-n">II</div>
+      <h3>Examen de los imperativos</h3>
+      <p>Identifica las cargas conceptuales y morales que sostienes por inercia cultural, culpa o complacencia hacia expectativas externas. La fase del camello cumple una función en la maduración del individuo; el objetivo es discernir cuándo dar paso a la soberanía del león.</p>
+      <span class="apply-tag">Claridad analítica</span>
+    </div>
+    <div class="apply-card rv">
+      <div class="apply-n">III</div>
+      <h3>Lectura rítmica y acústica</h3>
+      <p>Nietzsche concibió esta obra bajo principios musicales y cadencias métricas específicas. La asimilación meramente visual amortigua su potencia. Recitar fragmentos seleccionados en voz alta permite captar la dimensión estética e imperativa de la prosa.</p>
+      <span class="apply-tag">Aproximación estética</span>
+    </div>
+    <div class="apply-card rv d1">
+      <div class="apply-n">IV</div>
+      <h3>Tránsito de la crítica a la creación</h3>
+      <p>La rebelión del león desmantela los viejos dogmas, pero resulta insuficiente por sí misma. El paso subsiguiente y de mayor complejidad estriba en instituir valores propios. Tras la deconstrucción personal, define cuáles son los principios axiológicos que sostienes desde la autonomía.</p>
+      <span class="apply-tag">Desarrollo interior</span>
+    </div>
+    <div class="apply-card rv">
+      <div class="apply-n">V</div>
+      <h3>Preservación del aislamiento</h3>
+      <p>Zaratustra requiere de la austeridad de su cueva para madurar las verdades que posteriormente compartirá en el llano. Evalúa si dispones de espacios de silencio exentos de las demandas urgentes del mercado y la masa. El retorno al mundo presupone un ascenso previo.</p>
+      <span class="apply-tag">Cultivo de la autonomía</span>
+    </div>
+    <div class="apply-card rv d1">
+      <div class="apply-n">VI</div>
+      <h3>Amor Fati como asimilación activa</h3>
+      <p>Difiere de la resignación fatalista; implica una afirmación absoluta frente a los hechos consumados. Ante la adversidad o el error, clausura el lamento victimista y asume una postura creativa: <em>¿Cómo convierto esta circunstancia en material de autoafirmación?</em></p>
+      <span class="apply-tag">Reconfiguración mental</span>
+    </div>
+  </div>
+</section>
+
+<div class="llama-divider"></div>
+
+<!-- ─── FINAL ─── -->
+<section id="final">
+  <div class="final-glow"></div>
+  <span class="final-sym rv">☀</span>
+  <blockquote class="final-cita rv">
+    "Yo os enseño el Übermensch. El hombre es algo que debe ser <strong>superado</strong>. ¿Qué habéis hecho vosotros para superarlo?"
+  </blockquote>
+  <div class="final-linea rv"></div>
+  <span class="final-attr rv">Friedrich Nietzsche · Así Habló Zaratustra · Preludio, §3</span>
+</section>
+
+<footer>
+  <span class="foot-logo">☀ ASÍ HABLÓ ZARATUSTRA</span>
+  <span class="foot-text">Friedrich Nietzsche · 1883–1885 · La filosofía como fuego</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
